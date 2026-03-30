@@ -50,7 +50,18 @@ body {
     color: #152b4f;
 }
 .main_section{
-    width: 900px;
+    display: flex;
+    flex-direction: row;
+}
+.left_section{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
     height: 100%;
-
+}
+.right_section{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
 }
