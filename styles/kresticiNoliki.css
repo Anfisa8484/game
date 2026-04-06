@@ -79,6 +79,10 @@ body {
     color: #305a9c;
     text-align: center;
 }
+.figr{
+    width: 600px;
+    height: 600px;
+}
 
 /* .back{
     background-color: #99bbf184;
