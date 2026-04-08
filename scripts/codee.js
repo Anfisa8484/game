@@ -8,22 +8,31 @@
 // ctx.closePath();
 // ctx.fill();
 
+let i=0; 
+do
+{
+  document.addEventListener('click', function(e) {
 
-document.addEventListener('click', function(e) {
-    
-    const rect = element.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const xPos = x - 155;
-    const yPos = y - 95;
-    let img = document.createElement('img');
-    img.src = 'styles/imgs/krest.png';
-    img.style.position = 'absolute';
-    img = document.querySelector('.figr');
+      const element = document.querySelector('.main_section'); 
+      const rect = element.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const xPos = x - 95;
+      const yPos = y - 45;
 
-    // Позиция картинки там, где кликнули
-    img.style.left = xPos + 'px'; 
-    img.style.top = yPos + 'px';
-    document.body.appendChild(img);
-    console.log("ХУЙ");
-  });
+      let img = document.createElement('img');
+      // if(i%2 == 0){ img.src = 'styles/imgs/krest.png';}
+      // else { img.src = 'styles/imgs/krest.png';}
+      img.src = 'styles/imgs/krest.png';
+      img.style.position = 'absolute';
+      // img = document.querySelector('.figr');
+      img.classList.add('figr'); 
+      // Позиция картинки там, где кликнули
+      img.style.left = xPos + 'px'; 
+      img.style.top = yPos + 'px';
+      document.body.appendChild(img);
+      console.log(i);
+      if (true) return; 
+    }, { once: true });
+    i++;
+}while(i<9)
