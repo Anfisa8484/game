@@ -52,9 +52,11 @@ body {
     gap: 30px;
     padding-left: 30%;
     padding-right: 30%;
+    position: absolute;
+
 }
 .game-text{
-    padding-left: 10%;
+    padding-left: 5%;
     font-size: 30px;
     color: #305a9c;
     text-align: center;
@@ -62,16 +64,32 @@ body {
 .back{
     background-color: #99bbf184;
     filter: blur(25px);
-    width: 650px;
-    height: 650px;
+    width: 600px;
+    height: 600px;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
 }
 .imge{
     width: 600px;
     height: 600px;
-    padding-left: 5%;
+    position: absolute;
 }
+
+.kletki{
+    width: 600px;
+    height: 178px;
+    margin-bottom: 18px;
+    display: block;
+  
+}
+.kletka{
+    width: 178px;
+    height: 178px;
+    margin-right: 18px;
+    display: block;
+    
+}
+
 .text{
     margin: 10px;
     font-size: 20px;
