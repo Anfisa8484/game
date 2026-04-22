@@ -79,15 +79,14 @@ body {
     width: 600px;
     height: 178px;
     margin-bottom: 18px;
-    display: block;
-  
+    gap: 18px;
+    display: flex;
+    flex-direction: row;
 }
-.kletka{
-    width: 178px;
+.kletka1, .kletka2, .kletka3, .kletka4, .kletka5, .kletka6, .kletka7, .kletka8, .kletka9{
+    width: 188px;
     height: 178px;
-    margin-right: 18px;
-    display: block;
-    
+    z-index: 2;
 }
 
 .text{
