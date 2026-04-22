@@ -13,9 +13,16 @@
 let figurcount = 0 ;
 let pole = {
   figrs: [],
-  add(figr) {
+  addfigr(figr) {
     this.figrs.push(figr);
     figurcount++;
+  },
+  yacheiki:[{},{},{},
+            {},{},{},
+            {},{},{},],
+  
+  add(figr, num) {
+    this.yacheiki[num].push(figr);
   },
 }
 
@@ -40,10 +47,23 @@ document.addEventListener('click', function(e) {
         const element = document.querySelector('.main_section');  
         const rect = element.getBoundingClientRect();
         const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const xPos = x - 95;
-        const yPos = y - 45;
+        const y = e.clientY - rect.top;   
+         xPos = x + 510;
+         yPos = y - 45;
 
+        if(e.target == targrtPole[0]){ xPos = 660;  yPos = 185; num = 1;}
+        if(e.target == targrtPole[1]){ xPos = 870;  yPos = 185; num = 2;}
+        if(e.target == targrtPole[2]){ xPos = 1060;  yPos = 185; num = 3;}
+
+        if(e.target == targrtPole[3]){ xPos = 660;  yPos = 375; num = 4}
+        if(e.target == targrtPole[4]){ xPos = 870;  yPos = 375; num = 5}
+        if(e.target == targrtPole[5]){ xPos = 1060;  yPos = 375; num = 6}
+
+        if(e.target == targrtPole[6]){ xPos = 660;  yPos = 575; num = 7}
+        if(e.target == targrtPole[7]){ xPos = 870;  yPos = 575; num = 8}
+        if(e.target == targrtPole[8]){ xPos = 1060;  yPos = 575; num = 9}
+
+     
         let img = document.createElement('img');
 
         if(figurcount%2 == 0){ img.src = 'styles/imgs/krest.png'; shape = 0} // крест
@@ -64,12 +84,14 @@ document.addEventListener('click', function(e) {
         }
 
         document.body.appendChild(img);
-        pole.add({
+        pole.addfigr({
           klet,
           shape,
           x: xPos,
           y: yPos,
         });
+        pole.add()
+        
         console.log(pole.figrs[figurcount-1])
         console.log(figurcount);
       }

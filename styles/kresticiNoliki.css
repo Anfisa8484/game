@@ -50,9 +50,8 @@ body {
     align-items: center;
     padding-top: 3%;
     gap: 30px;
-    padding-left: 30%;
-    padding-right: 30%;
-    position: absolute;
+    margin: 0 auto;
+    position: relative;
 
 }
 .game-text{
