@@ -70,15 +70,10 @@ document.addEventListener('click', function(e) {
 
     // console.log(e.target); 
     // console.log(targrtPole); 
-    
-    for(let i=0; i<9; i++)
-    {
-      if((e.target == targrtPole[i])&&(yacheiki[i]!=2))
-
-      {
-           if((e.target == targrtPole[0])||(e.target == targrtPole[1])||(e.target == targrtPole[2])
-            ||(e.target == targrtPole[3])||(e.target == targrtPole[4])||(e.target == targrtPole[5])
-            ||(e.target == targrtPole[6])||(e.target == targrtPole[7])||(e.target == targrtPole[8]))
+      
+      if((e.target == targrtPole[0])||(e.target == targrtPole[1])||(e.target == targrtPole[2])
+        ||(e.target == targrtPole[3])||(e.target == targrtPole[4])||(e.target == targrtPole[5])
+        ||(e.target == targrtPole[6])||(e.target == targrtPole[7])||(e.target == targrtPole[8]))
         {
           
           const element = document.querySelector('.main_section');  
@@ -106,10 +101,10 @@ document.addEventListener('click', function(e) {
             const rect = element.getBoundingClientRect();
             xPos = rect.left + window.scrollY;  yPos = rect.top+ window.scrollX; num = 3;}
 
-          if(e.target == targrtPole[3]){ 
-              const element = document.querySelector('.kletka4');  
-              const rect = element.getBoundingClientRect();
-              xPos = rect.left + window.scrollY;  yPos = rect.top+ window.scrollX; num = 1;}
+        if(e.target == targrtPole[3]){ 
+            const element = document.querySelector('.kletka4');  
+            const rect = element.getBoundingClientRect();
+            xPos = rect.left + window.scrollY;  yPos = rect.top+ window.scrollX; num = 1;}
 
           if(e.target == targrtPole[4]){ 
             const element = document.querySelector('.kletka5');  
@@ -173,12 +168,7 @@ document.addEventListener('click', function(e) {
           }
         }
 
-    else{console.log("Нажмите на поле")}
-    
-    }
-      else{console.log('Выберите другую клетку');}
-    }
-     
+      else{console.log("Нажмите на поле")}
   }
   else{
   console.log("Слишком много фигур")
