@@ -56,6 +56,24 @@ function proverka(){
   if((yacheiki[2]==yacheiki[4])&&(yacheiki[2]==yacheiki[6])&&(yacheiki[2]==0)) {figurcount =9; win =0;}
   if((yacheiki[2]==yacheiki[4])&&(yacheiki[2]==yacheiki[6])&&(yacheiki[2]==1)) {figurcount =9; win =1;}
 }
+yacheiki=[ 2, 2, 2, 
+          2, 2, 2, 
+          2, 2, 2];
+
+// yacheiki=[ -1, -1, 2, 
+//           3, 4, 5, 
+//           6, 7, 8];          
+// yacheiki[0] = 0;
+console.log(yacheiki);
+function proverka(){
+  if((yacheiki[0]==yacheiki[1])&&(yacheiki[0]==yacheiki[2])&&(yacheiki[0]==0)) {console.log('крестики1');}
+  if((yacheiki[0]==yacheiki[1])&&(yacheiki[0]==yacheiki[2])&&(yacheiki[0]==1)) {console.log('нолики1');}
+  
+  if((yacheiki[3]==yacheiki[4])&&(yacheiki[3]==yacheiki[5])&&(yacheiki[3]==0)) {console.log('крестики2');}
+  if((yacheiki[3]==yacheiki[4])&&(yacheiki[3]==yacheiki[5])&&(yacheiki[3]==1)) {console.log('нолики2');}
+
+  if((yacheiki[6]==yacheiki[7])&&(yacheiki[6]==yacheiki[8])&&(yacheiki[6]==0)) {console.log('крестики3');}
+  if((yacheiki[6]==yacheiki[7])&&(yacheiki[6]==yacheiki[8])&&(yacheiki[6]==1)) {console.log('нолики3');}
 
 function rtandklet(){
   let i;
@@ -149,8 +167,7 @@ document.addEventListener('click', function(e) {
 
     // console.log(e.target); 
     // console.log(targrtPole); 
-
-
+      
       if((e.target == targrtPole[0])||(e.target == targrtPole[1])||(e.target == targrtPole[2])
         ||(e.target == targrtPole[3])||(e.target == targrtPole[4])||(e.target == targrtPole[5])
         ||(e.target == targrtPole[6])||(e.target == targrtPole[7])||(e.target == targrtPole[8]))
