@@ -66,15 +66,32 @@ yacheiki=[ 2, 2, 2,
 // yacheiki[0] = 0;
 console.log(yacheiki);
 function proverka(){
-  if((yacheiki[0]==yacheiki[1])&&(yacheiki[0]==yacheiki[2])&&(yacheiki[0]==0)) {console.log('крестики1');}
-  if((yacheiki[0]==yacheiki[1])&&(yacheiki[0]==yacheiki[2])&&(yacheiki[0]==1)) {console.log('нолики1');}
+  if((yacheiki[0]==yacheiki[1])&&(yacheiki[0]==yacheiki[2])&&(yacheiki[0]==0)) {figurcount =9; win =0;}
+  if((yacheiki[0]==yacheiki[1])&&(yacheiki[0]==yacheiki[2])&&(yacheiki[0]==1)) {figurcount =9; win =1;}
   
-  if((yacheiki[3]==yacheiki[4])&&(yacheiki[3]==yacheiki[5])&&(yacheiki[3]==0)) {console.log('крестики2');}
-  if((yacheiki[3]==yacheiki[4])&&(yacheiki[3]==yacheiki[5])&&(yacheiki[3]==1)) {console.log('нолики2');}
+  if((yacheiki[3]==yacheiki[4])&&(yacheiki[3]==yacheiki[5])&&(yacheiki[3]==0)) {figurcount =9; win =0;}
+  if((yacheiki[3]==yacheiki[4])&&(yacheiki[3]==yacheiki[5])&&(yacheiki[3]==1)) {figurcount =9; win =1;}
 
-  if((yacheiki[6]==yacheiki[7])&&(yacheiki[6]==yacheiki[8])&&(yacheiki[6]==0)) {console.log('крестики3');}
-  if((yacheiki[6]==yacheiki[7])&&(yacheiki[6]==yacheiki[8])&&(yacheiki[6]==1)) {console.log('нолики3');}
+  if((yacheiki[6]==yacheiki[7])&&(yacheiki[6]==yacheiki[8])&&(yacheiki[6]==0)) {figurcount =9; win =0;}
+  if((yacheiki[6]==yacheiki[7])&&(yacheiki[6]==yacheiki[8])&&(yacheiki[6]==1)) {figurcount =9; win =1;}
 
+
+  if((yacheiki[0]==yacheiki[3])&&(yacheiki[0]==yacheiki[6])&&(yacheiki[0]==0)) {figurcount =9; win =0;}
+  if((yacheiki[0]==yacheiki[3])&&(yacheiki[0]==yacheiki[6])&&(yacheiki[0]==1)) {figurcount =9; win =1;}
+  
+  if((yacheiki[1]==yacheiki[4])&&(yacheiki[1]==yacheiki[7])&&(yacheiki[1]==0)) {figurcount =9; win =0;}
+  if((yacheiki[1]==yacheiki[4])&&(yacheiki[1]==yacheiki[7])&&(yacheiki[1]==1)) {figurcount =9; win =1;}
+
+  if((yacheiki[2]==yacheiki[5])&&(yacheiki[2]==yacheiki[8])&&(yacheiki[2]==0)) {figurcount =9; win =0;}
+  if((yacheiki[2]==yacheiki[5])&&(yacheiki[2]==yacheiki[8])&&(yacheiki[2]==1)) {figurcount =9; win =1;}
+
+    
+  if((yacheiki[0]==yacheiki[4])&&(yacheiki[0]==yacheiki[8])&&(yacheiki[0]==0)) {figurcount =9; win =0;}
+  if((yacheiki[0]==yacheiki[4])&&(yacheiki[0]==yacheiki[8])&&(yacheiki[0]==1)) {figurcount =9; win =1;}
+
+  if((yacheiki[2]==yacheiki[4])&&(yacheiki[2]==yacheiki[6])&&(yacheiki[2]==0)) {figurcount =9; win =0;}
+  if((yacheiki[2]==yacheiki[4])&&(yacheiki[2]==yacheiki[6])&&(yacheiki[2]==1)) {figurcount =9; win =1;}
+}
 function rtandklet(){
   let i;
   console.log(yacheiki);
@@ -269,15 +286,38 @@ document.addEventListener('click', function(e) {
           {
             if(win==0){
               console.log("Победили крестики");
-              
             }
-            if(win==1){console.log("Победили нолики")}
+            if(win==1){console.log("Победили нолики");}
           }
         }
 
-      else{console.log("Нажмите на поле")}
+      else{console.log("Нажмите на поле");}
   }
   else{
-  console.log("Слишком много фигур")
+  console.log("Слишком много фигур");
   }
-});
+})
+
+// 
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tabbutton");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

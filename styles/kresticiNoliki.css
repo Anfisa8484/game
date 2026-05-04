@@ -7,6 +7,129 @@ body {
      line-height: 1.5;
      letter-spacing: 1px;
  }
+
+ .tab {
+    overflow: hidden;
+    border: 1px solid rgba(204, 204, 204, 0);
+  }
+  /* Style the buttons inside the tab */
+  .tabbutton {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    background-color: rgba(0,0,0,0);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    color: #305a9c;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tabbutton:hover {
+    background-color: #ddd;
+   
+  }
+  
+  /* Create an active/current tablink class */
+  .tabbutton.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    top: 50px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* Всплывающая форма-скрыта по умолчанию */
+  .form-popup {
+    display: none;
+    position: fixed;
+    position: fixed;
+    top: 50px;
+    right: 28px;
+    width: 280px;
+    bottom: 0;
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Добавление стилей в контейнер форм */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+    position: fixed;
+    top: 50px;
+    right: 28px;
+    width: 280px;
+    border: 3px solid #f1f1f1;
+
+  }
+  
+  /* Поля ввода полной ширины */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Когда входы получают фокус, сделайте что-нибудь */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Установите стиль для кнопки отправить/кнопка */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Добавьте красный цвет фона к кнопке отмена */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Добавьте некоторые эффекты наведения на кнопки */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }  
+
+
+
+
+
 .container {
     max-width: 1280px;
     padding: 20px;
@@ -29,12 +152,14 @@ body {
     bottom: 0;
 }
 
-
 .btn{
+    background-color: rgba(0,0,0,0);
     font-size: 20px;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
-    margin: 10px;
     color: #305a9c;
+ 
     text-align: center;
     text-decoration: none;
 }

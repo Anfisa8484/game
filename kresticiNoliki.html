@@ -16,10 +16,52 @@
     <body>
         <header class="head">
                 <a class="text">SuperGamer</a>
+                <a href="mainpage.html" class="btn">Главная</a>
+
             <div> 
-                <a href="#" class="btn">Главная</a>
-                <a href="#" class="btn">Услуги</a>
+                <div class="tab">
+                    <button class="tabbutton" onclick="openCity(event, 'London')">Вход</button>
+                    <button class="tabbutton" onclick="openCity(event, 'Paris')">Регистрация</button>
+                </div>
+                  
+                  <div id="London" class="tabcontent">
+                    <form action="../action_page.php" class="form-container">
+                        <h1>Вход</h1>
+                    
+                        <label for="email"><b>Почта</b></label>
+                        <input type="text" placeholder="Ваша почта" name="email" required>
+                    
+                        <label for="psw"><b>Пароль</b></label>
+                        <input type="password" placeholder="Ваш пароль" name="psw" required>
+                    
+                        <button type="submit" class="btn">Вход</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                    </form>
+                  </div>
+                  
+                  <div id="Paris" class="tabcontent">
+                    <form action="../action_page.php" class="form-container">
+                        <h1>Pегистрация</h1>
+
+                        <label for="name"><b>Имя</b></label>
+                        <input type="text" placeholder="Ваше имя" name="name" required>
+
+                        <label for="email"><b>Почта</b></label>
+                        <input type="text" placeholder="Ваша почта" name="email" required>
+                    
+                        <label for="psw"><b>Пароль</b></label>
+                        <input type="password" placeholder="Ваш пароль" name="psw" required>
+
+                        <label for="psw"><b>Повторите пороль</b></label>
+                        <input type="password" placeholder="Повторите ваш пароль" name="psw" required>
+                    
+                        <button type="submit" class="btn">Регистрация</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                    </form>
+                  </div>
+                
             </div>
+            
         </header>
 
      
