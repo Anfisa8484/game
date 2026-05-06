@@ -299,9 +299,9 @@ document.addEventListener('click', function(e) {
 })
 
 // 
-
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
+var  tabcontent;
+function openForm(evt, cityName) {
+  var i, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -314,10 +314,9 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 }
