@@ -10,7 +10,7 @@
 
 
 
-let figurcount = 0 ;
+let figurcount = 0;
 let win =2;
 let pole = {
   figrs: [],
@@ -174,7 +174,7 @@ function krug()
 }
 
 document.addEventListener('click', function(e) {
-  if(figurcount<9)
+  if((figurcount<9) )
     {
     const targrtPole = [document.querySelector('.kletka1'), document.querySelector('.kletka2'), 
                         document.querySelector('.kletka3'), document.querySelector('.kletka4'), 
@@ -254,7 +254,6 @@ document.addEventListener('click', function(e) {
             let img = document.createElement('img');
 
             img.src = 'styles/imgs/krest.png'; shape = 0; // крест
-            
 
             // img.src = 'styles/imgs/krest.png';
             img.style.position = 'absolute';
@@ -271,6 +270,7 @@ document.addEventListener('click', function(e) {
               x: xPos,
               y: yPos,
             });
+
             yacheiki[klet] = shape;
             console.log(yacheiki);
             console.log(pole.figrs[figurcount-1]);
@@ -279,6 +279,7 @@ document.addEventListener('click', function(e) {
             if(figurcount<9){
               setTimeout(krug, 1000);
              }
+
           }
           else{console.log("Выберите другую клетку");}
             
@@ -299,24 +300,4 @@ document.addEventListener('click', function(e) {
 })
 
 // 
-var  tabcontent;
-function openForm(evt, cityName) {
-  var i, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tabbutton");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
-function closeForm() {
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-}
