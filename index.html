@@ -47,20 +47,20 @@
                   </div>
                   
                   <div id="Paris" class="tabcontent">
-                    <form action="../action_page.php" class="form-container">
+                    <form action="../action_page.php" class="form-container" id="userForm" onclick="registration()" >
                         <h1>Pегистрация</h1>
 
                         <label for="name"><b>Имя</b></label>
-                        <input type="text" placeholder="Ваше имя" name="name" required>
+                        <input type="text" placeholder="Ваше имя" name="name" id="mame" required>
 
                         <label for="email"><b>Почта</b></label>
-                        <input type="text" placeholder="Ваша почта" name="email" required>
+                        <input type="text" placeholder="Ваша почта" name="email" id="email" required>
                     
                         <label for="psw"><b>Пароль</b></label>
-                        <input type="password" placeholder="Ваш пароль" name="psw" required>
+                        <input type="password" placeholder="Ваш пароль" name="psw" id="psw" required>
 
                         <label for="psw"><b>Повторите пороль</b></label>
-                        <input type="password" placeholder="Повторите ваш пароль" name="psw" required>
+                        <input type="password" placeholder="Повторите ваш пароль" name="repitepsw" id="repitepsw" required>
                     
                         <button type="submit" class="btn">Регистрация</button>
                         <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>

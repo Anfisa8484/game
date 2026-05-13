@@ -10,15 +10,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Neucha&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet"  href="styles/mainpagestyle.css">
+    <link rel="stylesheet"  href="styles/registration.css">
     <title>main</title>
 </head>
 <html>
     <body>
         <header class="head">
                 <a class="text">SuperGamer</a>
-            <div> 
-                <a href="#" class="btn">Главная</a>
-                <a href="#" class="btn">Услуги</a>
+          
+                <div> 
+                    <div class="tab">
+                        <button class="tabbutton" onclick="openForm(event, 'London')">Вход</button>
+                        <button class="tabbutton" onclick="openForm(event, 'Paris')">Регистрация</button>
+                    </div>
+                      
+                      <div id="London" class="tabcontent">
+                        <form action="../action_page.php" class="form-container">
+                            <h1>Вход</h1>
+                        
+                            <label class="reg" for="email"><b>Почта</b></label>
+                            <input class="reg" type="text" placeholder="Ваша почта" name="email" required>
+                        
+                            <label for="psw"><b>Пароль</b></label>
+                            <input type="password" placeholder="Ваш пароль" name="psw" required>
+                        
+                            <button type="submit" class="btn">Вход</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                        </form>
+                      </div>
+                      
+                      <div id="Paris" class="tabcontent">
+                        <form action="../action_page.php" class="form-container">
+                            <h1>Pегистрация</h1>
+    
+                            <label for="name"><b>Имя</b></label>
+                            <input type="text" placeholder="Ваше имя" name="name" required>
+    
+                            <label for="email"><b>Почта</b></label>
+                            <input type="text" placeholder="Ваша почта" name="email" required>
+                        
+                            <label for="psw"><b>Пароль</b></label>
+                            <input type="password" placeholder="Ваш пароль" name="psw" required>
+    
+                            <label for="psw"><b>Повторите пороль</b></label>
+                            <input type="password" placeholder="Повторите ваш пароль" name="psw" required>
+                        
+                            <button type="submit" class="btn">Регистрация</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                        </form>
+                      </div>
+                    
+                </div>
             </div>
         </header>
 
@@ -31,10 +73,14 @@
                     <img src="styles/imgs/KN.png" alt="guess number"  class="imge">
                     <p class="name">Угадай чисто</p>
                 </a>
+                <a href="guessnumber.html" class="card">
+                    <img src="styles/imgs/KN.png" alt="guess number"  class="imge">
+                    <p class="name">Cтастистика</p>
+                </a>
         </main>
         <footer class="foot">
             <a class="text"> При потдержке Xbox Game Studios и Nintendo</a>
         </footer>
-        
+        <script src="scripts/registratoin.js"></script>
     </body>
 </html>
